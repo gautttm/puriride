@@ -1,0 +1,29 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "bikes"
+    label: "Bikes"
+    folder: "content/bikes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Bike Number", name: "bike_number", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "cars"
+    label: "Cars"
+    folder: "content/cars"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Seats", name: "seats", widget: "number" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Image", name: "image", widget: "image" }
